@@ -11,8 +11,28 @@ header{
     font-size: 1.5rem;
 }
 header, form{
-  min-height: 20vh;
+  min-height: 25vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+form input,form button{
+  font-family: 'Cormorant Unicase', serif;
+  font-weight: bold;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  border: none;
+  outline: none;
+  background: white;
+}
+
+form button{
+  color: rgba(232, 147, 159);
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+form button hover{
+  color: white;
+  background: rgba(232, 147, 159);
 }
