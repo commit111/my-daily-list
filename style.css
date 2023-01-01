@@ -1,23 +1,25 @@
-body{
+body {
   min-height: 100vh;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: linear-gradient(120deg, rgba(190, 115, 212),rgba(251, 178, 110));
-  font-family: 'Cormorant Unicase', serif;
+  background: linear-gradient(120deg, rgba(190, 115, 212), rgba(251, 178, 110));
+  font-family: "Cormorant Unicase", serif;
   color: white;
 }
-header{
-    font-size: 1.5rem;
+header {
+  font-size: 1.5rem;
 }
-header, form{
+header,
+form {
   min-height: 25vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-form input,form button{
-  font-family: 'Cormorant Unicase', serif;
+form input,
+form button {
+  font-family: "Cormorant Unicase", serif;
   font-weight: bold;
   padding: 0.5rem;
   font-size: 1.5rem;
@@ -26,13 +28,13 @@ form input,form button{
   background: white;
 }
 
-form button{
+form button {
   color: rgba(232, 147, 159);
   background: white;
   cursor: pointer;
   transition: all 0.3s ease;
 }
-form button hover{
+form button:hover {
   color: white;
-  background: rgba(232, 147, 159);
+  background: rgba(216, 205, 212);
 }
