@@ -20,18 +20,21 @@ function addTodo(event) {
   const newTodo = document.createElement("li");
   newTodo.innerText = "hey";
   newTodo.classList.add("todo-item");
-  todoDiv.appendChild("newTodo"); //sticks it inside the div
+  todoDiv.appendChild(newTodo); //sticks it inside the div
   
   //CHECK MARK BUTTON
   const completedButton = document.createElement("button");
   completedButton.innerHTML = '<i class="fa-solid fa-check"></i>'; //makes i html element in the btn
   completedButton.classList.add("complete-btn");
-  todoDiv.appendChild("completedButton");
+  todoDiv.appendChild(completedButton);
   
   //CHECK TRASH BUTTON
   const trashButton = document.createElement("button");
-  trashButton.innerHTML = '<i class="fa-regular fa-trash"></i>';
+  trashButton.innerHTML = '<i class="fa-solid fa-trash"></i>';
   trashButton.classList.add("trash-btn");
-  todoDiv.appendChild("trashButton");
+  todoDiv.appendChild(trashButton);
+  
+  //APPEND TO LIST
+  todoList.appendChild(todoDiv);
   
 }

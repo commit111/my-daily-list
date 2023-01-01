@@ -8,11 +8,11 @@ body {
   color: white;
 }
 header {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 header,
 form {
-  min-height: 25vh;
+  min-height: 24vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,7 +22,7 @@ form button {
   font-family: "Cormorant Unicase", serif;
   font-weight: bold;
   padding: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 1.9rem;
   border: none;
   outline: none;
   background: white;
@@ -37,4 +37,21 @@ form button {
 form button:hover {
   color: white;
   background: rgba(216, 205, 212);
+}
+
+.todo-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo-list{
+  min-width: 28%;
+  list-style: none;
+  margin-right: 2rem;
+}
+.todo{
+  margin: 0.5rem;
+  background: white;
+  color: black;
+  font-weight: bold;
 }
