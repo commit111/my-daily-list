@@ -1,8 +1,18 @@
 body{
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: linear-gradient(90deg, rgba(233, 70, 191),rgba(162, 233, 70));
+  background: linear-gradient(120deg, rgba(190, 115, 212),rgba(251, 178, 110));
   font-family: 'Cormorant Unicase', serif;
+  color: white;
+}
+header{
+    font-size: 1.5rem;
+}
+header, form{
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
