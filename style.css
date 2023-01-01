@@ -1,7 +1,8 @@
 body{
+  height: 100vh;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-image: 
+  background: linear-gradient(90deg, rgba(233, 70, 191),rgba(162, 233, 70));
   font-family: 'Cormorant Unicase', serif;
 }
