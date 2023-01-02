@@ -37,7 +37,6 @@ form button {
   background: white;
   cursor: pointer;
   transition: all 0.3s ease;
-  padding: 1.1rem 0rem;
 }
 form button:hover {
   color: white;
@@ -50,9 +49,9 @@ form button:hover {
   align-items: center;
 }
 .todo-list {
-  min-width: 28%;
+  max-width: 28%;
   list-style: none;
-  margin-right: 2rem;
+  margin-right: 2.5rem;
 }
 .todo {
   margin: 0.5rem;
