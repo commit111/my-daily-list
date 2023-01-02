@@ -86,7 +86,7 @@ function filterTodo(e) {
           }
           break;
         case "uncompleted":
-          if (todo.classList.contians("completed")) {
+          if (todo.classList.contains("completed")) {
             mStyle.display = "none";
           } else{
             mStyle.display = "flex";

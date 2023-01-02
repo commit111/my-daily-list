@@ -119,10 +119,10 @@ select {
   position: relative;
   overflow: hidden;
 }
-.select option{
+.select option {
   font-weight: bold;
 }
-.select::after{
+.select::after {
   content: "\25BC";
   position: absolute;
   background: rgba(229, 150, 175);
@@ -132,7 +132,7 @@ select {
   pointer-events: none;
   transition: all 0.3s ease;
 }
-.select:hover::after{
+.select:hover::after {
   background: white;
   color: rgba(229, 150, 175);
 }
