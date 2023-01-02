@@ -39,17 +39,17 @@ form button:hover {
   background: rgba(216, 205, 212);
 }
 
-.todo-container{
+.todo-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.todo-list{
+.todo-list {
   min-width: 28%;
   list-style: none;
   margin-right: 2rem;
 }
-.todo{
+.todo {
   margin: 0.5rem;
   background: white;
   color: black;
@@ -59,19 +59,22 @@ form button:hover {
   justify-content: space-between;
   align-items: center;
 }
-.todo li{
+.todo li {
   flex: 1;
 }
+.todo-item {
+  padding: 0rem 0.5rem;
+}
 
-.trash-btn, .complete-btn{
+.trash-btn,
+.complete-btn {
   background: rgba(255, 190, 164);
   color: white;
   border: none;
   padding: 1rem;
   cursor: pointer;
 }
-.complete-btn{
+.complete-btn {
   background: rgba(166, 230, 155);
   color: white;
 }
-
