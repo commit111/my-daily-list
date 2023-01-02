@@ -37,10 +37,12 @@ form button {
   background: white;
   cursor: pointer;
   transition: all 0.3s ease;
+  margin-left: 0.3rem;
 }
 form button:hover {
   color: white;
-  background: rgba(216, 205, 212);
+  background: rgba(229, 150, 175);
+  /* background: rgba(216, 205, 212); */
 }
 
 .todo-container {
@@ -118,6 +120,7 @@ select {
   margin: 1rem;
   position: relative;
   overflow: hidden;
+  background: white;
 }
 .select option {
   font-weight: bold;
@@ -129,7 +132,7 @@ select {
   color: white;
   top: 0;
   right: 0;
-  padding: 1.1rem;
+  padding: 1.2rem;
   pointer-events: none;
   transition: all 0.3s ease;
 }
