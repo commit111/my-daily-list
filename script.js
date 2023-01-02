@@ -8,6 +8,7 @@ const filterOption = document.querySelector(".filter-todo");
 todoButton.addEventListener("click", addTodo);
 todoList.addEventListener("click", deleteCheck);
 filterOption.addEventListener("click", filterTodo);
+todoInput.addEventListener("click", clearField);
 
 //Functions
 function addTodo(event) {
@@ -96,4 +97,8 @@ function filterTodo(e) {
     }
     
   });
+}
+
+function clearField(e) {
+  todoInput.value = "";
 }

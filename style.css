@@ -37,12 +37,14 @@ form button {
   background: white;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-left: 0.3rem;
 }
 form button:hover {
   color: white;
-  background: rgba(229, 150, 175);
-  /* background: rgba(216, 205, 212); */
+  /* background: rgba(229, 150, 175); */
+  background: rgba(216, 205, 212); 
+}
+form button i{
+  padding: 0rem 0.3rem; /*makes the plus sign background square-shaped*/
 }
 
 .todo-container {
