@@ -112,9 +112,9 @@ function clearField(e) {
 
 function saveLocalTodos(todo){
   //CHECK --- do I already have things in here?
-  let todos;
-  if(localStorage.getItem("todos") === null){
-    todos = [];
+  let todos = [""];
+  if(localStorage.getItem("todos") === null || localStorage.getItem("todos") === undefined){
+    todos = [""];
   }else{
     todos = JSON.parse(localStorage.getItem("todos"));
   }
