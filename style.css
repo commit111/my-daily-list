@@ -49,7 +49,7 @@ form button:hover {
   align-items: center;
 }
 .todo-list {
-  max-width: 28%;
+  min-width: 28%;
   list-style: none;
   margin-right: 2.5rem;
 }
