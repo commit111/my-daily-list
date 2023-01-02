@@ -29,7 +29,8 @@ form button {
   border: none;
   outline: none;
   background: white;
-  color: rgba(62, 58, 60);
+  color: rgba(154, 148, 150); /*rgba(216, 205, 212); /*rgba(62, 58, 60) for dark grey*/
+  font-style: italic;
 }
 
 form button {
