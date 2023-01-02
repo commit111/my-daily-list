@@ -118,6 +118,6 @@ function saveLocalTodos(todo){
   }else{
     todos = JSON.parse(localStorage.getItem("todos"));
   }
-  todos.push(todo);
+  //todos.push(todo);
   localStorage.setItem("todos", JSON.stringify(todos));
 }
