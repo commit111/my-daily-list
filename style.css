@@ -53,6 +53,7 @@ form button:hover {
   margin: 0.5rem;
   background: white;
   color: black;
+  font-size: 1.5rem;
   font-weight: bold;
   display: flex;
   justify-content: space-between;
@@ -70,7 +71,7 @@ form button:hover {
   cursor: pointer;
 }
 .complete-btn{
-  background: rgba(194, 255, 164);
+  background: rgba(166, 230, 155);
   color: white;
 }
 
