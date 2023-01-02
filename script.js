@@ -101,6 +101,6 @@ function filterTodo(e) {
 
 function clearField(e) {
   todoInput.value = "";
-  todoInput.style.color = "rgba(62, 58, 60)";
+  todoInput.style.color = "rgba(60, 60, 60)";
   todoInput.style.fontStyle = "normal";
 }
