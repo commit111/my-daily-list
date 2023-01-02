@@ -107,14 +107,20 @@ select {
   border: none;
 
   color: rgba(229, 150, 175);
-  width: 10rem;
+  width: 13rem;
   cursor: pointer;
-  padding: 1.1rem;
+  padding: 0.8rem;
+  font-family: "Cormorant Unicase", serif;
+  font-weight: bold;
+  font-size: 1.4rem;
 }
 .select {
   margin: 1rem;
   position: relative;
   overflow: hidden;
+}
+.select option{
+  font-weight: bold;
 }
 .select::after{
   content: "\25BC";
@@ -124,4 +130,9 @@ select {
   right: 0;
   padding: 1.1rem;
   pointer-events: none;
+  transition: all 0.3s ease;
+}
+.select:hover::after{
+  background: white;
+  color: rgba(229, 150, 175);
 }
