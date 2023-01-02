@@ -104,3 +104,17 @@ function clearField(e) {
   todoInput.style.color = "rgba(60, 60, 60)";
   todoInput.style.fontStyle = "normal";
 }
+
+// local storage begins below here
+
+function saveLocalTodos(todo){
+  //CHECK --- do I already have things in here?
+  let todos;
+  if(localStorage.getItem("todos") === null){
+    todos = [];
+  }else{
+    todos = JSON.parse(localStorage.getItem("todos"));
+  }
+  todos.push("todo");
+  local
+}
