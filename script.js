@@ -70,16 +70,30 @@ function filterTodo(e) {
   //since we use nodes, we can use a for-each loop on the todos
   
   todos.forEach(function(todo){
-    switch(e.target.value){
-      case "all":
-        todo.style.display = "flex";
-      case "completed":
-        if(todo.classList.contains("completed")){
-          todo.style.display = "flex";
-        }else{
-          todo.style.display = "none";
-        }
-      
+    
+    const mStyle = todo.style;
+    if (mStyle != undefined && mStyle != null){
+      switch (e.target.value) {
+        case "all":
+          mStyle.display = "flex";
+          break;
+        case "completed":
+          if (todo.classList.contains("completed")) {
+            mStyle.display = "flex";
+            break;
+          } else {
+            mStyle.display = "none";
+          }
+          break;
+        case "uncompleted":
+          if (todo.classList.contians("completed")) {
+            mStyle.display = "none";
+          } else{
+            mStyle.display = "flex";
+          }
+          break;
+      }
     }
+    
   });
 }
