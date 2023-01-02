@@ -12,41 +12,47 @@ function addTodo(event) {
   //Prevent form from submitting after click
   event.preventDefault();
   console.log("hello");
-  
+
   //Todo DIV
   const todoDiv = document.createElement("div");
   todoDiv.classList.add("todo");
-  
+
   //Create LI
   const newTodo = document.createElement("li");
   newTodo.innerText = todoInput.value;
   newTodo.classList.add("todo-item");
   todoDiv.appendChild(newTodo); //sticks it inside the div
-  
+
   //CHECK MARK BUTTON
   const completedButton = document.createElement("button");
   completedButton.innerHTML = '<i class="fa-solid fa-check"></i>'; //makes i html element in the btn
   completedButton.classList.add("complete-btn");
   todoDiv.appendChild(completedButton);
-  
+
   //CHECK TRASH BUTTON
   const trashButton = document.createElement("button");
   trashButton.innerHTML = '<i class="fa-solid fa-trash"></i>';
   trashButton.classList.add("trash-btn");
   todoDiv.appendChild(trashButton);
-  
+
   //APPEND TO LIST
   todoList.appendChild(todoDiv);
-  
+
   //CLEAR TODO INPUT VALUE
   todoInput.value = "";
 }
 
-function deleteCheck(e){
+function deleteCheck(e) {
   //console.log(e.target);
   const item = e.target;
   //DELETE TODO
-  if(item.classList[0] === "trash-btn"){
-    item.remove();
+  if (item.classList[0] === "trash-btn") {
+    const todo = item.parentElement;
+    todo.remove();
+  }
+  //CHECK MARK TODO
+  if (item.classList[0] === "complete-btn") {
+    const todo = item.parentElement;
+    todo.classList.toggle("completed");
   }
 }
