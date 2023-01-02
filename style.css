@@ -29,7 +29,7 @@ form button {
 }
 
 form button {
-  color: rgba(232, 147, 159);
+  color: rgba(229, 150, 175);
   background: white;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -54,4 +54,23 @@ form button:hover {
   background: white;
   color: black;
   font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+.todo li{
+  flex: 1;
+}
+
+.trash-btn, .complete-btn{
+  background: rgba(255, 190, 164);
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+}
+.complete-btn{
+  background: rgba(194, 255, 164);
+  color: white;
+}
+
