@@ -26,6 +26,9 @@ function addTodo(event) {
   newTodo.innerText = todoInput.value;
   newTodo.classList.add("todo-item");
   todoDiv.appendChild(newTodo); //sticks it inside the div
+  
+  //for local storage: ADD TODO TO LOCAL STORAGE
+  saveLocalTodos(todoInput.value);
 
   //CHECK MARK BUTTON
   const completedButton = document.createElement("button");
@@ -115,6 +118,6 @@ function saveLocalTodos(todo){
   }else{
     todos = JSON.parse(localStorage.getItem("todos"));
   }
-  todos.push("todo");
-  local
+  todos.push(todo);
+  localStorage.setItem("todos", JSON.stringify(todos));
 }
