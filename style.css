@@ -13,7 +13,7 @@ form {
   justify-content: center;
   align-items: center;
 }
-form{
+form {
   min-height: 14vh;
 }
 header {
@@ -89,12 +89,39 @@ form button:hover {
   pointer-events: none;
 }
 
-.completed{
+.completed {
   text-decoration: line-through;
   opacity: 0.5;
 }
 
-.fall{
+.fall {
   transform: translateY(8rem) rotateZ(20deg);
   opacity: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+
+  color: rgba(229, 150, 175);
+  width: 10rem;
+  cursor: pointer;
+  padding: 1.1rem;
+}
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.select::after{
+  content: "\25BC";
+  position: absolute;
+  background: rgba(229, 150, 175);
+  top: 0;
+  right: 0;
+  padding: 1.1rem;
+  pointer-events: none;
 }
