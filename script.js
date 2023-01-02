@@ -66,5 +66,20 @@ function deleteCheck(e) {
 
 function filterTodo(e) {
   const todos = todoList.childNodes;
-  console.log(todos);
+  
+  //since we use nodes, we can use a for-each loop on the todos
+  
+  todos.forEach(function(todo){
+    switch(e.target.value){
+      case "all":
+        todo.style.display = "flex";
+      case "completed":
+        if(todo.classList.contains("completed")){
+          todo.style.display = "flex";
+        }else{
+          todo.style.display = "none";
+        }
+      
+    }
+  });
 }
