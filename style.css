@@ -29,7 +29,7 @@ form button {
   border: none;
   outline: none;
   background: white;
-  color: rgba(154, 148, 150); /*rgba(216, 205, 212); /*rgba(62, 58, 60) for dark grey*/
+  color: rgba(216, 205, 212); /*rgba(154, 148, 150); /*rgba(62, 58, 60) for dark grey*/
   font-style: italic;
 }
 
@@ -61,7 +61,7 @@ form button i{
 .todo {
   margin: 0.5rem;
   background: white;
-  color: rgba(62, 58, 60);
+  color: rgba(94, 94, 94);
   font-size: 1.5rem;
   font-weight: bold;
   display: flex;
@@ -112,12 +112,12 @@ select {
   border: none;
 
   color: rgba(229, 150, 175);
-  width: 13rem;
+  width: 14rem;
   cursor: pointer;
-  padding: 0.8rem;
+  padding: 0.68rem;
   font-family: "Cormorant Unicase", serif;
   font-weight: bold;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 .select {
   margin: 1rem;
