@@ -126,6 +126,7 @@ select {
   content: "\25BC";
   position: absolute;
   background: rgba(229, 150, 175);
+  color: white;
   top: 0;
   right: 0;
   padding: 1.1rem;
