@@ -179,7 +179,7 @@ function removeLocalTodos(todo){
     todos = JSON.parse(localStorage.getItem("todos"));
   }
   
-  console.log(todo.children[0].textContent);
-  console.log(todos.indexOf('eat'))
-  //const todoIndex = todo;
+  const todoIndex = todo.children[0].textContent; //the word to be removed
+  todos.splice(todos.indexOf(todoIndex), 1); //finds the index of word and splices that one word from array
+  localStorage.setItem('todos', JSON.stringify(todos)); //save the updated array to local storage
 }
