@@ -31,7 +31,7 @@ function addTodo(event) {
 
   //Create LI
   const newTodo = document.createElement("li");
-  newTodo.textContent = todoInput.value;
+  newTodo.textContent = todoInput.value; //was .innerText instead of .textContent, but it's bad practice
   newTodo.classList.add("todo-item");
   todoDiv.appendChild(newTodo); //sticks it inside the div
 
@@ -65,6 +65,7 @@ function deleteCheck(e) {
     const todo = item.parentElement;
     //Animate the fall
     todo.classList.add("fall");
+    removeLocalTodos(todo);
     todo.addEventListener("transitionend", function () {
       todo.remove();
     });
@@ -118,6 +119,10 @@ function clearField(e) {
 
 function saveLocalTodos(todo) {
   //CHECK --- do I already have things in here?
+  
+  //TO CLEAR LOCAL STORAGE
+  //localStorage.clear(); 
+  
   let todos;
   if (localStorage.getItem("todos") === null) {
     todos = [];
@@ -167,5 +172,14 @@ function getTodos() {
 }
 
 function removeLocalTodos(todo){
+  let todos;
+  if (localStorage.getItem("todos") === null) {
+    todos = [];
+  } else {
+    todos = JSON.parse(localStorage.getItem("todos"));
+  }
   
+  console.log(todo.children[0].textContent);
+  console.log(todos.indexOf('eat'))
+  //const todoIndex = todo;
 }
