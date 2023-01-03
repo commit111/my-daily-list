@@ -21,7 +21,7 @@ function addTodo(event) {
   //Checks value length before creating todo
   /*
   if (todoInput.value.length < 1) {
-    alert("Please type in something.");
+    alert("value is empty");
   } else {put create li in here}
   */
 
@@ -74,6 +74,7 @@ function deleteCheck(e) {
   if (item.classList[0] === "complete-btn") {
     const todo = item.parentElement;
     todo.classList.toggle("completed");
+    filterTodo();
   }
 }
 
@@ -85,7 +86,7 @@ function filterTodo(e) {
   todos.forEach(function (todo) {
     const mStyle = todo.style;
     if (mStyle != undefined && mStyle != null) {
-      switch (e.target.value) {
+      switch (filterOption.value) { //used to be (e.target.value)
         case "all":
           mStyle.display = "flex";
           break;
