@@ -4,7 +4,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   background: linear-gradient(120deg, rgba(190, 115, 212), rgba(251, 178, 110));
-  font-family: "Cormorant Unicase", serif;
+  font-family: "Archivo", sans-serif; /*used to be "Cormorant Unicase", serif; and font-weight: bold*/
   color: white;
 }
 header,
@@ -22,8 +22,8 @@ header {
 }
 form input,
 form button {
-  font-family: "Cormorant Unicase", serif;
-  font-weight: bold;
+  font-family: "Archivo", serif;
+  font-weight: normal;
   padding: 0.5rem;
   font-size: 1.9rem;
   border: none;
@@ -63,7 +63,7 @@ form button i{
   background: white;
   color: rgba(60, 60, 60);
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: normal;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -112,11 +112,11 @@ select {
   border: none;
 
   color: rgba(229, 150, 175);
-  width: 14rem;
+  width: 14.5rem;
   cursor: pointer;
   padding: 0.68rem;
-  font-family: "Cormorant Unicase", serif;
-  font-weight: bold;
+  font-family: "Archivo", serif;
+  font-weight: normal;
   font-size: 1.6rem;
 }
 .select {
@@ -126,7 +126,7 @@ select {
   background: white;
 }
 .select option {
-  font-weight: bold;
+  font-weight: normal;
 }
 .select::after {
   content: "\25BC";
