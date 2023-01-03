@@ -112,12 +112,14 @@ function clearField(e) {
 
 function saveLocalTodos(todo){
   //CHECK --- do I already have things in here?
-  let todos = [""];
-  if(localStorage.getItem("todos") === null || localStorage.getItem("todos") === undefined){
-    todos = [""];
+  let todos = [];
+  
+  if(window.localStorage.getItem(todos) === null){
+    todos = [];
   }else{
-    todos = JSON.parse(localStorage.getItem("todos"));
+    todos = JSON.parse(window.localStorage.getItem(todos));
   }
-  //todos.push(todo);
-  localStorage.setItem("todos", JSON.stringify(todos));
+  todos.push(todo);
+  window.localStorage.setItem(todos, JSON.stringify(todos));
+  console.log(todos);
 }
