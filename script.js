@@ -180,7 +180,8 @@ function removeLocalTodos(todo){
     todos = JSON.parse(localStorage.getItem("todos"));
   }
   
-  const todoIndex = todo.children[0].textContent; //the word to be removed
-  todos.splice(todos.indexOf(todoIndex), 1); //finds the index of word and splices that one word from array
+  const todoIndex = Array.from(todoList.childNodes).indexOf(todo); // the word and index taken from the todo list
+  
+  todos.splice(todoIndex, 1); //splices that one word from array
   localStorage.setItem('todos', JSON.stringify(todos)); //save the updated array to local storage
 }
