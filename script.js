@@ -14,8 +14,15 @@ todoInput.addEventListener("click", clearField);
 function addTodo(event) {
   //Prevent form from submitting after click
   event.preventDefault();
-  
+
   //console.log("hello");
+
+  //Checks value length before creating todo
+  /*
+  if (todoInput.value.length < 1) {
+    alert("Please type in something.");
+  } else {put create li in here}
+  */
 
   //Todo DIV
   const todoDiv = document.createElement("div");
@@ -26,7 +33,7 @@ function addTodo(event) {
   newTodo.innerText = todoInput.value;
   newTodo.classList.add("todo-item");
   todoDiv.appendChild(newTodo); //sticks it inside the div
-  
+
   //for local storage: ADD TODO TO LOCAL STORAGE
   saveLocalTodos(todoInput.value);
 
@@ -70,13 +77,12 @@ function deleteCheck(e) {
 
 function filterTodo(e) {
   const todos = todoList.childNodes;
-  
+
   //since we use nodes, we can use a for-each loop on the todos
-  
-  todos.forEach(function(todo){
-    
+
+  todos.forEach(function (todo) {
     const mStyle = todo.style;
-    if (mStyle != undefined && mStyle != null){
+    if (mStyle != undefined && mStyle != null) {
       switch (e.target.value) {
         case "all":
           mStyle.display = "flex";
@@ -92,13 +98,12 @@ function filterTodo(e) {
         case "uncompleted":
           if (todo.classList.contains("completed")) {
             mStyle.display = "none";
-          } else{
+          } else {
             mStyle.display = "flex";
           }
           break;
       }
     }
-    
   });
 }
 
@@ -110,16 +115,15 @@ function clearField(e) {
 
 // local storage begins below here
 
-function saveLocalTodos(todo){
+function saveLocalTodos(todo) {
   //CHECK --- do I already have things in here?
-  let todos = [];
-  
-  if(window.localStorage.getItem(todos) === null){
+  let todos;
+  if (localStorage.getItem(todos) === null) {
     todos = [];
-  }else{
-    todos = JSON.parse(window.localStorage.getItem(todos));
+  } else {
+    todos = JSON.parse(localStorage.getItem(todos));
   }
   todos.push(todo);
-  window.localStorage.setItem(todos, JSON.stringify(todos));
+  localStorage.setItem(todos, JSON.stringify(todos));
   console.log(todos);
 }
