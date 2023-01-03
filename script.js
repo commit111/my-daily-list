@@ -5,6 +5,7 @@ const todoList = document.querySelector(".todo-list");
 const filterOption = document.querySelector(".filter-todo");
 
 //Event Listeners
+document.addEventListener("DOMContentLoaded", getTodos);
 todoButton.addEventListener("click", addTodo);
 todoList.addEventListener("click", deleteCheck);
 filterOption.addEventListener("change", filterTodo);
@@ -118,12 +119,53 @@ function clearField(e) {
 function saveLocalTodos(todo) {
   //CHECK --- do I already have things in here?
   let todos;
-  if (localStorage.getItem(todos) === null) {
+  if (localStorage.getItem("todos") === null) {
     todos = [];
   } else {
-    todos = JSON.parse(localStorage.getItem(todos));
+    todos = JSON.parse(localStorage.getItem("todos"));
   }
   todos.push(todo);
-  localStorage.setItem(todos, JSON.stringify(todos));
+  localStorage.setItem("todos", JSON.stringify(todos));
   console.log(todos);
+}
+
+function getTodos() {
+  let todos;
+  if (localStorage.getItem("todos") === null) {
+    todos = [];
+  } else {
+    todos = JSON.parse(localStorage.getItem("todos"));
+  }
+
+  todos.forEach(function (todo) {
+    // COPIED FROM THE addTodo function...
+    //Todo DIV
+    const todoDiv = document.createElement("div");
+    todoDiv.classList.add("todo");
+
+    //Create LI
+    const newTodo = document.createElement("li");
+    newTodo.textContent = todo;
+    newTodo.classList.add("todo-item");
+    todoDiv.appendChild(newTodo); //sticks it inside the div
+
+    //CHECK MARK BUTTON
+    const completedButton = document.createElement("button");
+    completedButton.innerHTML = '<i class="fa-solid fa-check"></i>'; //makes i html element in the btn
+    completedButton.classList.add("complete-btn");
+    todoDiv.appendChild(completedButton);
+
+    //CHECK TRASH BUTTON
+    const trashButton = document.createElement("button");
+    trashButton.innerHTML = '<i class="fa-solid fa-trash"></i>';
+    trashButton.classList.add("trash-btn");
+    todoDiv.appendChild(trashButton);
+
+    //APPEND TO LIST
+    todoList.appendChild(todoDiv);
+  });
+}
+
+function removeLocalTodos(todo){
+  
 }
